@@ -1,9 +1,13 @@
-let coinFlip = Math.round(Math.random())
-let i = num
-num = prompt('Enter a number between 1 and 100')
+let coinFlip
 
-for (let i = 0; i >= 0 && i <= 100; i ++) {
-if (coinFlip < 0 && num < 0) {
-    document.write(' The coin flip was heads and you chose heads, you win!')
-}
+let numberOfFlips = parseInt(prompt("Enter how many times you want to flip the coin."), 10);
+
+for (let i = 0; i < numberOfFlips; i++) {
+    coinFlip = Math.round(Math.random())
+
+    if (coinFlip === 0) {
+        console.log("it's heads!")
+    } else {
+        console.log("it's tails!")
+    }
 }
